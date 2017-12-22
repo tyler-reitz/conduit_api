@@ -152,7 +152,7 @@ router.put("/:article", auth.required, (req, res, next) => {
       }
       req.article
         .save()
-        .then(article => res.json({ articles: article.toJSONFor(user) }))
+        .then(article => res.json({ article: article.toJSONFor(user) }))
         .catch(next);
     } else {
       return res.sendStatus(403);
