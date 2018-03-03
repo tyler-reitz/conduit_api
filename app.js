@@ -47,10 +47,6 @@ require('./config/passport')
 
 app.use(require('./routes'))
 
-app.get('/', (req, res) => {
-  res.send('Pong')
-})
-
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found')
