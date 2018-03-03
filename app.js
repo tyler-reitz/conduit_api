@@ -47,7 +47,7 @@ require('./config/passport')
 
 app.use(require('./routes'))
 
-app.use('/', (req, res) => {
+app.use('/ping', (req, res) => {
   res.send('pong')
 })
 
